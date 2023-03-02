@@ -1,0 +1,18 @@
+<script>// Récupérer le tableau de produits stocké dans le stockage local
+    var panier = JSON.parse(localStorage.getItem('panier'));
+    
+    // Parcourir le tableau de produits et afficher chaque produit dans la page
+    for (var i = 0; i < panier.length; i++) {
+      var produit = panier[i];
+    
+      var nomProduit = produit.nom;
+      var prixProduit = produit.prix;
+    
+      // Afficher le nom et le prix du produit dans la page
+      var produitHtml = '<p>' + nomProduit + ' - ' + prixProduit + '</p>';
+      document.getElementById('liste-produits').innerHTML += produitHtml;
+    }
+    </script>
+    
+    <h1>Mon panier</h1>
+<div id="liste-produits"></div>
