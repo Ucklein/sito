@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NenCklein</title>
+<link rel="shortcut icon" href="billy.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Mon site de vente en ligne</title>
+    </head>
+    <body>
+
+
+      <script src="script.js"></script>
+      <header>
+        <h1><font size="5">Mon site de vente en ligne</h1></font>
+        <nav>
+          <ul>
+            <font size="5"></font> <li><a href="#">Accueil</a></li></font>
+            <font size="5"></font><li><a href="#">Produits</a></li></font>
+            <font size="5"></font><li><a href="#">À propos</a></li></font>
+            <font size="5"></font><li><a href="#">Contact</a></li></font>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h2>Nouveautés</h2>
+          <article>
+            <h3>Produit 1</h3>
+            <a href="troll.html" target="_blank" title="Ajouter au panier"><img src="billy.png" alt="Image du produit 1"></a>
+            <p>Description du produit 1</p>
+            <button onclick="ajouterAuPanier('Produit 1', 10.99)"><a href="panier1.html" target="_blank" title="Ajouter au panier"></a><font color="white">Ajouter au panier</font></button>
+            
+            <script>
+              
+            function ajouterAuPanier(nomProduit, prixProduit) {
+              // Créer un tableau pour stocker les produits
+              var panier = [];
+            
+              // Vérifier si le tableau existe déjà dans le stockage local
+              if (localStorage.getItem('panier') !== null) {
+                // Récupérer le tableau existant du stockage local et le convertir en tableau JavaScript
+                panier = JSON.parse(localStorage.getItem('panier'));
+              }
+            
+              // Ajouter le produit au tableau
+              var produit = {
+                nom: nomProduit,
+                prix: prixProduit
+              };
+              panier.push(produit);
+            
+              // Stocker le tableau mis à jour dans le stockage local
+              localStorage.setItem('panier', JSON.stringify(panier));
+            
+              // Rediriger l'utilisateur vers la page panier1.html
+              window.location.href = "panier1.html";
+            }
+          </script>
+
+          
+          </article>
+          <article>
+            <h3>Produit 2</h3>
+            <a href="troll.html" target="_blank" title="Ajouter au panier"><img src="billy.png" alt="Image du produit 1"></a>
+            
+            <p>Description du produit 2</p>
+            <button onclick="ajouterAuPanier('Produit 1', 10.99)"><a href="panier1.html" target="_blank" title="Ajouter au panier"></a><font color="white">Ajouter au panier</font></button>
+          </article>
+          <!-- Ajouter d'autres articles ici -->
+        </section>
+        <section>
+          <h2>Promotions</h2>
+          <article>
+            <h3>Produit en promotion</h3>
+            <a href="troll.html" target="_blank" title="Ajouter au panier"><img src="billy.png" alt="Image du produit 1"></a>
+            <p>Description du produit en promotion</p>
+            <button>Ajouter au panier</button>
+          </article>
+          <!-- Ajouter d'autres articles ici -->
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>online shop</h4>
+              <ul>
+                <li><a href="#">watch</a></li>
+                <li><a href="#">bag</a></li>
+                <li><a href="#">shoes</a></li>
+                <li><a href="#">dress</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+
+
+              <form method="post" action="mailto:votreemail@email.com">
+
+            
+              </form>
+              
+            </div>
+          </div>
+        </div>
+     </footer>
+    </body>
+  </html>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html> 
